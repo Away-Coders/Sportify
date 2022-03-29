@@ -1,11 +1,13 @@
 //@dart = 2.9
 
 class ArticleModel {
-  
   String author;
   String title;
-  String desc;
+  String description;
   String url;
-  String imageurl;
+  String urlToImage;
+  String content;
+  String articleUrl;
 
+  ArticleModel({this.author, this.title, this.description, this.url, this.urlToImage,this.content, this.articleUrl});
 }
