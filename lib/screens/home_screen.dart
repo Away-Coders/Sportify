@@ -6,6 +6,7 @@ import 'package:sportify/gradient_text.dart';
 
 import '../helper/news.dart';
 import '../models/article_model.dart';
+import '../views/article_view.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -50,25 +51,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: articles.length,
                   itemBuilder: (context, index) {
                     return Tile(
-                      urlToImage: articles[index].urlToImage,
-                      title: articles[index].title,
-                      description: articles[index].description,
-                    );
+                        urlToImage: articles[index].urlToImage,
+                        title: articles[index].title,
+                        description: articles[index].description,
+                        url: articles[index].url);
                   })),
     );
   }
 }
 
 class Tile extends StatelessWidget {
-  const Tile({key, this.urlToImage, this.title, this.description})
+  const Tile({key, this.urlToImage, this.title, this.description, this.url})
       : super(key: key);
-  final String urlToImage, title, description;
+  final String urlToImage, title, description, url;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [Image.network(urlToImage), Text(title), Text(description)],
-    ));
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ArticleView(
+              blogUrl:url,
+            )));
+      },
+      child: Container(
+          child: Column(
+        children: [Image.network(urlToImage), Text(title), Text(description)],
+      )),
+    );
   }
 }
