@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:sportify/constants.dart';
 import 'package:sportify/gradient_text.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import '../helper/news.dart';
 import '../models/article_model.dart';
-import '../views/article_view.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _loading
           ? Center(child: Container(child: CircularProgressIndicator()))
           : Container(
-              child: ListView.builder(
+              child: PageView.builder(
                   itemCount: articles.length,
                   itemBuilder: (context, index) {
                     return Tile(
@@ -67,17 +67,9 @@ class Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ArticleView(
-              blogUrl:url,
-            )));
-      },
-      child: Container(
-          child: Column(
-        children: [Image.network(urlToImage), Text(title), Text(description)],
-      )),
-    );
+    return Container(
+        child: Column(
+      children: [Image.network(urlToImage), Text(title), Text(description)],
+    ));
   }
 }
