@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:sportify/constants.dart';
 import 'package:sportify/gradient_text.dart';
+import 'package:sportify/models/tile.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../helper/news.dart';
@@ -53,23 +54,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Tile(
                         urlToImage: articles[index].urlToImage,
                         title: articles[index].title,
-                        description: articles[index].description,
                         url: articles[index].url);
                   })),
     );
-  }
-}
-
-class Tile extends StatelessWidget {
-  const Tile({key, this.urlToImage, this.title, this.description, this.url})
-      : super(key: key);
-  final String urlToImage, title, description, url;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [Image.network(urlToImage), Text(title), Text(description)],
-    ));
   }
 }
