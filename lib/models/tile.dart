@@ -19,13 +19,19 @@ class Tile extends StatelessWidget {
     return Container(
         child: Column(
       children: [
-        Image.network(urlToImage),
+        AspectRatio(
+          aspectRatio: 1,
+          child: Container(
+            // height: MediaQuery.of(context).size.height / 2,
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsets.all(10.0),
+            child: Image.network(urlToImage),
+          ),
+        ),
         Text(
           title,
           style: TextStyle(
-            fontSize: 25,
-            color: kPrimaryColor
-          ),
+              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ],
     ));

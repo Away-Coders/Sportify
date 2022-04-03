@@ -61,6 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _loading
           ? Center(child: Container(child: CircularProgressIndicator()))
           : Container(
+              constraints: BoxConstraints.expand(),
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    colorFilter: 
+      ColorFilter.mode(Colors.black.withOpacity(0.1), 
+      BlendMode.dstATop),
+                      // image: NetworkImage(
+                      //     "https://previews.123rf.com/images/ms10/ms101605/ms10160500050/58020505-abstract-blue-vector-runner-running-man-vector-isolated-illustration-sport-athlete-run-decathlon.jpg"
+                      // ),
+                      image: AssetImage("assets/SportifyLogo.png"),
+                      fit: BoxFit.cover)),
               child: PageView.builder(
                   itemCount: articles.length,
                   itemBuilder: (context, index) {
