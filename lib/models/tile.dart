@@ -10,8 +10,7 @@ import '../helper/news.dart';
 import '../models/article_model.dart';
 
 class Tile extends StatelessWidget {
-  const Tile({key, this.urlToImage, this.title, this.url})
-      : super(key: key);
+  const Tile({key, this.urlToImage, this.title, this.url}) : super(key: key);
   final String urlToImage, title, url;
 
   @override
@@ -28,11 +27,11 @@ class Tile extends StatelessWidget {
             child: Image.network(urlToImage),
           ),
         ),
-        Text(
-          title,
-          style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
+        Text(title,
+            style: Theme.of(context)
+                .textTheme
+                .headline6
+                .copyWith(color: kBodyTextColorDark))
       ],
     ));
   }

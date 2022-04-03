@@ -43,7 +43,7 @@ ThemeData darkThemeData(BuildContext context) {
     iconTheme: IconThemeData(color: kBodyTextColorDark),
     accentIconTheme: IconThemeData(color: kAccentIconDarkColor),
     primaryIconTheme: IconThemeData(color: kPrimaryIconDarkColor),
-    textTheme: GoogleFonts.latoTextTheme().copyWith(
+    textTheme: GoogleFonts.montserratTextTheme().copyWith(
       bodyText1: TextStyle(color: kBodyTextColorDark),
       bodyText2: TextStyle(color: kBodyTextColorDark),
       headline4: TextStyle(color: kTitleTextDarkColor, fontSize: 32),

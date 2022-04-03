@@ -43,8 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
         title: GradientText(
           'Discover',
           style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-          gradient:
-              LinearGradient(colors: [Color(0xFF4568dc), Color(0xFFb06ab3)]),
+          gradient: LinearGradient(colors: [
+            Color.fromARGB(255, 90, 105, 170),
+            Color.fromARGB(255, 152, 226, 137)
+          ]),
         ),
         actions: [
           IconButton(
@@ -64,9 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(
                   image: DecorationImage(
-                    colorFilter: 
-      ColorFilter.mode(Colors.black.withOpacity(0.1), 
-      BlendMode.dstATop),
+                      colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(0.1), BlendMode.dstATop),
                       // image: NetworkImage(
                       //     "https://previews.123rf.com/images/ms10/ms101605/ms10160500050/58020505-abstract-blue-vector-runner-running-man-vector-isolated-illustration-sport-athlete-run-decathlon.jpg"
                       // ),
