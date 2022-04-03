@@ -21,6 +21,20 @@ const kTitleTextDarkColor = Colors.white;
 
 const kShadowColor = Color(0xFF364564);
 
+const textInputDecoration = InputDecoration(
+  fillColor: Colors.white,
+  filled: true,
+  enabledBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+          color: Colors.brown,
+          width: 2.0)
+  ),
+  focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.black87,width: 2.0)
+  ),
+
+);
+
 
 
 

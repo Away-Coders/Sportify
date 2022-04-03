@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:sportify/constants.dart';
 import 'package:sportify/gradient_text.dart';
 import 'package:sportify/models/tile.dart';
+import 'package:sportify/services/auth.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../helper/news.dart';
-import '../models/article_model.dart';
+import '../../helper/news.dart';
+import '../../models/article_model.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -34,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +46,17 @@ class _HomeScreenState extends State<HomeScreen> {
           gradient:
               LinearGradient(colors: [Color(0xFF4568dc), Color(0xFFb06ab3)]),
         ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.logout,
+              color: Colors.brown[900],
+            ),
+            onPressed: () async {
+              return await _auth.signOut();
+            },
+          )
+        ],
       ),
       body: _loading
           ? Center(child: Container(child: CircularProgressIndicator()))
