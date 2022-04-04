@@ -22,10 +22,16 @@ const kTitleTextDarkColor = Colors.white;
 const kShadowColor = Color(0xFF364564);
 
 const textInputDecoration = InputDecoration(
-  fillColor: Colors.white,
-  filled: true,
+  // fillColor: Colors.white,
+  // filled: true,
+  contentPadding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
+  hintStyle: TextStyle(fontSize:15),
   enabledBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.brown, width: 2.0)),
+      borderSide: BorderSide(color: kPrimaryColor, width: 2.0)),
   focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.black87, width: 2.0)),
+      borderSide: BorderSide(color: kPrimaryColor, width: 2.0),
+      borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
+      ),
+  ),
 );

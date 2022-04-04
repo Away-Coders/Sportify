@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:sportify/screens/authenticate/register_with_email.dart';
 import 'package:sportify/screens/authenticate/signinemail.dart';
 
+import '../../login/login.dart';
+
 class Authenticate extends StatefulWidget {
   const Authenticate({Key? key}) : super(key: key);
 
@@ -22,7 +24,7 @@ class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
     if (showSignIn) {
-      return SignInEmail(toggleView:  toggleView);
+      return Login(toggleView:  toggleView);
     } else {
       return RegisterWithEmail(toggleView:  toggleView);
     }

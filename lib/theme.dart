@@ -33,7 +33,7 @@ ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
     primaryColor: kPrimaryColor,
     accentColor: kAccentDarkColor,
-    scaffoldBackgroundColor: Color(0xFF0D0C0E),
+    scaffoldBackgroundColor: kBackgroundDarkColor,
     appBarTheme: appBarTheme,
     colorScheme: ColorScheme.light(
       secondary: kSecondaryDarkColor,
@@ -46,8 +46,6 @@ ThemeData darkThemeData(BuildContext context) {
     textTheme: GoogleFonts.montserratTextTheme().copyWith(
       bodyText1: TextStyle(color: kBodyTextColorDark),
       bodyText2: TextStyle(color: kBodyTextColorDark),
-      headline4: TextStyle(color: kTitleTextDarkColor, fontSize: 32),
-      headline1: TextStyle(color: kTitleTextDarkColor, fontSize: 80),
     ),
   );
 }

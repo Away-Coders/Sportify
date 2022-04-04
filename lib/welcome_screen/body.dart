@@ -11,11 +11,11 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     // This size provide us total height and width of our screen
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
+      // crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Text(
-          "SPORTIFY",
+          "SPOTIFY",
           style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: size.height * 0.05),

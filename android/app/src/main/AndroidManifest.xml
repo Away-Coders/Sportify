@@ -2,6 +2,7 @@
     package="com.example.sportify">
    <uses-permission android:name="android.permission.INTERNET" />
    <application
+        android:usesCleartextTraffic="true"
         android:label="sportify"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
