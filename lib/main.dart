@@ -9,6 +9,8 @@ import 'package:sportify/screens/wrapper.dart';
 import 'package:sportify/services/auth.dart';
 import 'package:sportify/theme.dart';
 
+import 'register/register.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
