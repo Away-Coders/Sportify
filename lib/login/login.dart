@@ -3,7 +3,6 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sportify/constants.dart';
 
 import '../services/auth.dart';
@@ -62,11 +61,6 @@ class _LoginState extends State<Login> {
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Icon(
-                  //   FontAwesomeIcons.envelope,
-                  //   size: 24
-                  // ),
-                  // SizedBox(height: size.height * 0.005),
                   TextFormField(
                     decoration: textInputDecoration.copyWith(hintText: "EMAIL",),
                     validator: (val) => val.isEmpty ? 'Enter an email' : null,

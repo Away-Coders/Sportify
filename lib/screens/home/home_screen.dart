@@ -39,40 +39,40 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: GradientText(
-          'Discover',
-          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-          gradient: LinearGradient(colors: [
-            Color.fromARGB(255, 90, 105, 170),
-            Color.fromARGB(255, 152, 226, 137)
-          ]),
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              Icons.logout,
-              color: Colors.brown[900],
-            ),
-            onPressed: () async {
-              return await _auth.signOut();
-            },
-          )
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: GradientText(
+      //     'SPORTIFY',
+      //     style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+      //     gradient: LinearGradient(colors: [
+      //       Color.fromARGB(255, 90, 105, 170),
+      //       Color.fromARGB(255, 152, 226, 137)
+      //     ]),
+      //   ),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(
+      //         Icons.logout,
+      //         color: Colors.brown[900],
+      //       ),
+      //       onPressed: () async {
+      //         return await _auth.signOut();
+      //       },
+      //     )
+      //   ],
+      // ),
       body: _loading
           ? Center(child: Container(child: CircularProgressIndicator()))
           : Container(
               constraints: BoxConstraints.expand(),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.1), BlendMode.dstATop),
-                      // image: NetworkImage(
-                      //     "https://previews.123rf.com/images/ms10/ms101605/ms10160500050/58020505-abstract-blue-vector-runner-running-man-vector-isolated-illustration-sport-athlete-run-decathlon.jpg"
-                      // ),
-                      image: AssetImage("assets/SportifyLogo.png"),
-                      fit: BoxFit.cover)),
+              // decoration: BoxDecoration(
+              //     image: DecorationImage(
+              //         colorFilter: ColorFilter.mode(
+              //             Colors.black.withOpacity(0.1), BlendMode.dstATop),
+              //         // image: NetworkImage(
+              //         //     "https://previews.123rf.com/images/ms10/ms101605/ms10160500050/58020505-abstract-blue-vector-runner-running-man-vector-isolated-illustration-sport-athlete-run-decathlon.jpg"
+              //         // ),
+              //         image: AssetImage("assets/SportifyLogo.png"),
+              //         fit: BoxFit.cover)),
               child: PageView.builder(
                   itemCount: articles.length,
                   itemBuilder: (context, index) {
