@@ -1,13 +1,14 @@
+// @dart=2.9
+
+
 
 import 'package:flutter/material.dart';
-import 'package:sportify/screens/authenticate/register_with_email.dart';
-import 'package:sportify/screens/authenticate/signinemail.dart';
 
-import '../../login/login.dart';
-import '../../register/register.dart';
+import 'login.dart';
+import 'register.dart';
 
 class Authenticate extends StatefulWidget {
-  const Authenticate({Key? key}) : super(key: key);
+  const Authenticate({key}) : super(key: key);
 
   @override
   _AuthenticateState createState() => _AuthenticateState();

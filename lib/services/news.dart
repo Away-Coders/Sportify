@@ -1,7 +1,8 @@
-import 'dart:convert';
+// @dart=2.9
 
-import '../models/article_model.dart';
+import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:sportify/models/article_model.dart';
 
 class News {
   List<ArticleModel> news = [];

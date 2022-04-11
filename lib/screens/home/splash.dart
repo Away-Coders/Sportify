@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
+// @dart=2.9
 
-import '../screens/wrapper.dart';
+
+import 'package:flutter/material.dart';
+import '../wrapper.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  const Splash({key}) : super(key: key);
 
   @override
   State<Splash> createState() => _SplashState();

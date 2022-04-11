@@ -3,13 +3,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:sportify/constants.dart';
-import 'package:sportify/gradient_text.dart';
-import 'package:sportify/models/tile.dart';
-import 'package:webview_flutter/webview_flutter.dart';
-
-import '../helper/news.dart';
-import '../models/article_model.dart';
+import 'package:sportify/components/constants.dart';
 
 class Tile extends StatelessWidget {
   const Tile({key, this.urlToImage, this.title, this.url}) : super(key: key);
@@ -25,7 +19,7 @@ class Tile extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.4,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(0.0),
                   bottomRight: Radius.circular(10.0),
                   topLeft: Radius.circular(0.0),
@@ -40,7 +34,7 @@ class Tile extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.03,vertical:0),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF23252E),
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(40.0),

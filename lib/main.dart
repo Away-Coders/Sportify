@@ -1,16 +1,13 @@
+// @dart=2.9
+
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sportify/login/login.dart';
 import 'package:sportify/models/My_User.dart';
-import 'package:sportify/screens/home/Demo.dart';
-import 'package:sportify/screens/home/home_screen.dart';
-import 'package:sportify/screens/wrapper.dart';
 import 'package:sportify/services/auth.dart';
-import 'package:sportify/theme.dart';
-import 'package:sportify/welcome_screen/splash.dart';
-import 'register/register.dart';
+import 'package:sportify/components/theme.dart';
+import 'package:sportify/screens/home/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

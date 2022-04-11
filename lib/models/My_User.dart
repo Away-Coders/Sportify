@@ -5,11 +5,11 @@ class MyUser{
   MyUser({this.uid});
 }
 
-class UserDataDetails{
-  final String uid;
-  final String name;
-  final String sugars;
-  final int strength;
+// class UserDataDetails{
+//   final String uid;
+//   final String name;
+//   final String sugars;
+//   final int strength;
 
-  UserDataDetails({this.uid,this.sugars,this.name,this.strength });
-}
+//   UserDataDetails({this.uid,this.sugars,this.name,this.strength });
+// }

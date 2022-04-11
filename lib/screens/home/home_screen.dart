@@ -1,13 +1,13 @@
 // @dart=2.9
 
 import 'package:flutter/material.dart';
-import 'package:sportify/constants.dart';
-import 'package:sportify/gradient_text.dart';
+import 'package:sportify/components/constants.dart';
+import 'package:sportify/components/gradient_text.dart';
 import 'package:sportify/models/tile.dart';
 import 'package:sportify/services/auth.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../../helper/news.dart';
+import '../../services/news.dart';
 import '../../models/article_model.dart';
 
 class HomeScreen extends StatefulWidget {
