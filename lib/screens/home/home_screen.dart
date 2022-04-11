@@ -79,7 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     return Tile(
                         urlToImage: articles[index].urlToImage,
                         title: articles[index].title,
-                        url: articles[index].url);
+                        url: articles[index].url,
+                        content: articles[index].content,);
                   })),
     );
   }
